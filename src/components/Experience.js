@@ -99,7 +99,7 @@ const Experience = () => {
 
             <Details
               position="Media Buyer"
-              company="SimbeSevenMedia"
+              company="Simba Seven"
               companyLink="#"
               time="2019-2022"
               address="California, USA | Freelance"
