@@ -33,6 +33,8 @@ export default function Home() {
               <Image
                 src={profilePic}
                 alt="Rana Muzamil"
+                width={420}        // ← YEH ADD KARO
+  height={520}
                 className="h-auto w-full max-h-[520px] rounded-[2rem] object-cover"
                 sizes="(max-width: 768px) 90vw, (max-width: 1200px) 60vw, 420px"
                 priority
@@ -74,6 +76,7 @@ export default function Home() {
         <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
           <Image
             className="relative h-auto w-full"
+            fill              
             src={lightBulb}
             alt="Codebucks"
           />

@@ -50,9 +50,9 @@ export default function Articles() {
                   controls
                   playsInline
                   preload="metadata"
-                  className="w-full h-auto bg-black"
+                  className="w-[640px] h-[360px] mx-auto bg-black"
                 >
-                  <source src={testimonialVideo} type="video/mp4" />{" "}
+                  <source src={testimonialVideo} type="video/mp4" />
                   Your browser does not support this video format.
                 </video>
               </div>
