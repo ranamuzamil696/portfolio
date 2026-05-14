@@ -1,6 +1,6 @@
 import AnimatedText from "@/components/AnimatedText";
 import Head from "next/head";
-const testimonialVideo = "/images/testimonial.MOV";
+const testimonialVideo = "/images/testimonial.mp4";
 
 import Layout from "@/components/Layout";
 import TransitionEffect from "@/components/TransitionEffect";
