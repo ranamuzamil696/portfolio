@@ -118,7 +118,9 @@ const Navbar = () => {
             whileTap={{ scale: 0.9 }}
             aria-label="Checkout my Fiverr profile"
           >
-            <SiFiverr className="w-10 h-10 text-white" />
+            <SiFiverr
+              className={`w-10 h-10 ${mode === "light" ? "text-dark" : "text-white"}`}
+            />
           </motion.a>
           <motion.a
             target={"_blank"}
@@ -139,7 +141,9 @@ const Navbar = () => {
             whileTap={{ scale: 0.9 }}
             aria-label="Checkout my Upwork profile"
           >
-            <SiUpwork className="w-6 h-6 text-white" />
+            <SiUpwork
+              className={`w-6 h-6 ${mode === "light" ? "text-dark" : "text-white"}`}
+            />
           </motion.a>
 
           <button
