@@ -10,7 +10,10 @@ export default function Articles() {
     <>
       <Head>
         <title>Let them speak | Testimonials</title>
-        <meta name="description" content="Hear from clients who worked with Rana Muzamil on marketing growth, paid ads, and brand performance campaigns." />
+        <meta
+          name="description"
+          content="Hear from clients who worked with Rana Muzamil on marketing growth, paid ads, and brand performance campaigns."
+        />
       </Head>
       <TransitionEffect />
       <main
@@ -35,15 +38,21 @@ export default function Articles() {
                   Podcast Host: Interviews with Entrepreneurs podcast
                 </p>
                 <p className="text-base leading-8 text-dark/80 dark:text-light/80 mt-4">
-                  Services Given: Meta Ads | Paid Leads | Podcast Studio Bookings
+                  Services Given: Meta Ads | Paid Leads | Podcast Studio
+                  Bookings
                 </p>
               </div>
             </section>
 
             <section className="space-y-10">
               <div className="rounded-3xl overflow-hidden bg-light shadow-lg dark:bg-dark dark:shadow-black/20">
-                <video controls playsInline preload="metadata" className="w-full h-auto bg-black">
-                  <source src={testimonialVideo} type="video/quicktime" />
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-auto bg-black"
+                >
+                  <source src={testimonialVideo} type="video/mp4" />{" "}
                   Your browser does not support this video format.
                 </video>
               </div>
