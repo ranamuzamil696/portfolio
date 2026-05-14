@@ -45,23 +45,37 @@ const Education = () => {
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
             type="Bachelor of Science in Computer Science"
-            time="2016-2020"
-            place="Massachusetts Institute of Technology (MIT)"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence."
+            time="2018-2022"
+            place="Pakistan"
+            info="Built a strong foundation in programming, databases, and software systems. Developed problem-solving and analytical skills applied later in real-world digital and business environments."
           />
 
           <Details
-            type="Master of Computer Science"
-            time="2020-2022"
-            place="Stanford University"
-            info="Completed a master's project on deep learning, developing a new neural network architecture for natural language understanding."
+            type="Certified: Data Analytics & Machine Learning"
+            time="2022"
+            place="IT Academy, Pakistan Air Force"
+            info="Gained hands-on experience in data analysis, model fundamentals, and decision-making through data. Applied analytical thinking to understand patterns, performance, and optimization opportunities."
           />
 
           <Details
-            type="Online Coursework"
-            time="2016-2020"
-            place="Coursera and edX"
-            info="Completed coursework in advanced topics such as Reinforcement Learning, Computer Vision, and Machine Learning Engineering."
+            type="Certified: Content Creation & Editing"
+            time="2023"
+            place="Udemy"
+            info="Learned modern content creation techniques for digital platforms and brand storytelling. Focused on creating engaging, conversion-driven visual and written content."
+          />
+
+          <Details
+            type="Certified: AI – HCIA"
+            time="2022"
+            place="Huawei"
+            info="Developed foundational knowledge of artificial intelligence concepts and real-world use cases. Strengthened understanding of how AI supports automation, analytics, and smarter decision-making."
+          />
+
+          <Details
+            type="Certified: Meta & Google Ads"
+            time="2018-2019"
+            place="Ads Wizard"
+            info="Trained in paid advertising fundamentals across Meta and Google platforms. Built a strong base in campaign structure, targeting, optimization, and performance tracking."
           />
         </ul>
       </div>

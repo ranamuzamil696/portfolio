@@ -127,10 +127,8 @@ export default function Articles() {
   return (
     <>
       <Head>
-        <title>Simple Portfolio Built with Nextjs | Articles Page</title>
-        <meta name="description" content="Browse through CodeBucks's collection of software engineering articles and 
-        tutorials on Next.js, React.js, web development, and more. 
-        Gain valuable insights and stay up-to-date with SEO tips for building a developer portfolio." />
+        <title>Rana Muzamil - Marketing Articles & Insights</title>
+        <meta name="description" content="Browse through Rana Muzamil's collection of marketing articles and insights on digital growth, paid advertising, content strategy, and performance-driven marketing." />
       </Head>
       <TransitionEffect />
       <main
@@ -138,7 +136,7 @@ export default function Articles() {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="Words Can Change the World!"
+            text="Insights That Drive Growth!"
             className="!text-8xl !leading-tight mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
 

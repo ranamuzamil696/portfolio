@@ -62,56 +62,48 @@ const Experience = () => {
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
             <Details
-              position="Software Engineer"
-              company="Google"
-              companyLink="https://google.com"
-              time="2022-Present"
-              address="Mountain View, CA"
-              work="Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+              position="Marketing Manager"
+              company="Oporto"
+              companyLink="https://oporto.com"
+              time="2025-Present"
+              address="Dubai, UAE | On Site"
+              work="Led a complete organic marketing transformation that resulted in approximately 22 percent revenue growth from the existing baseline. Achieved the highest sales performance in the brand's history through structured funnels, content strategy, and channel alignment. Increased delivery performance by over 580 percent and boosted monthly product sales volume by nearly 480 percent, all without using paid advertising. Built and executed the full marketing structure end to end."
             />
 
             <Details
-              position="Intern"
-              company="Facebook"
-              companyLink="https://facebook.com"
-              time="Summer 2021"
-              address="Menlo Park, CA."
-              work="Worked on a team responsible for developing a new mobile app
-              feature that allowed users to create and share short-form video
-              content, including designing and implementing a new user interface
-              and developing the backend infrastructure to support the feature."
+              position="Media Buyer"
+              company="Scandinavian Lines Logistics"
+              companyLink="#"
+              time="2024-2025"
+              address="Dubai, UAE | On Site"
+              work="Managed Meta and Google Ads with a consistent 80 percent success performance score, delivering daily high-intent leads. Designed and optimized paid media funnels supported by strong tracking infrastructure using analytics and event-based measurement. Took a data-driven approach to daily optimization, continuously improving lead quality and revenue performance through structured campaign management."
             />
 
             <Details
-              position="Software Developer"
-              company="Amazon"
-              companyLink="https://amazon.com"
-              time="2020-2021"
-              address="Seattle, WA."
-              work="Worked on a team responsible for developing Amazon's mobile app, including implementing new features such as product recommendations and user reviews, and optimizing the app's performance and reliability."
+              position="Marketing Manager"
+              company="Atta ul Zahoor LLC"
+              companyLink="#"
+              time="2022-2024"
+              address="Dubai, UAE | On Site"
+              work="Handled complete digital presence including social media management, WordPress website development, and lead generation. Planned and executed daily content while monitoring campaign performance and focusing on measurable outcomes. Supported business growth through consistent execution, optimization, and result-focused marketing activities."
             />
 
             <Details
-              position="Software Developer Intern"
-              company="Microsoft"
-              companyLink="https://microsoft.com"
-              time="Summer 2019"
-              address="Redmond, WA."
-              work="Worked on a team responsible for developing new features for
-              Microsoft's Windows operating system, including implementing a new
-              user interface for a system settings panel and optimizing the
-              performance of a core system component."
+              position="Media Buyer"
+              company="Shopogenie"
+              companyLink="#"
+              time="2025-Present"
+              address="United Kingdom | Freelance"
+              work="Managing Meta Ads for a podcast production company offering studio and editing services. Generating consistent, high-quality leads with a 99 percent success performance score. Campaigns are structured for precision targeting and lead quality, supporting steady growth and client acquisition."
             />
 
             <Details
-              position="Teaching Assistant"
-              company="MIT"
-              companyLink="https://mit.edu"
-              time="Fall 2018"
-              address="Massachusetts Ave, Cambridge, MA."
-              work="Assisted in teaching a course on computer programming, held office
-              hours to help students with assignments, and graded exams and
-              assignments."
+              position="Media Buyer"
+              company="SimbeSevenMedia"
+              companyLink="#"
+              time="2019-2022"
+              address="California, USA | Freelance"
+              work="Worked as a full-cycle media buyer for a logistics and trucking business. Managed end-to-end paid campaigns across Meta, Google, and YouTube Ads with an 85 percent success performance score. Focused on lead generation, campaign scaling, and continuous optimization to support sustained business growth."
             />
           </ul>
         </div>
