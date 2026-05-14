@@ -8,7 +8,7 @@ import Link from "next/link";
 import TransitionEffect from "@/components/TransitionEffect";
 
 const lightBulb = "/images/svgs/miscellaneous_icons_1.svg";
-const profilePic = "/images/profile/developer-pic-1.png";
+const profilePic = "/images/about.png";
 
 
 export default function Home() {
@@ -32,7 +32,7 @@ export default function Home() {
             <div className="w-1/2 lg:hidden md:inline-block md:w-full">
               <Image
                 src={profilePic}
-                alt="CodeBucks"
+                alt="Rana Muzamil"
                 className="h-auto w-full"
                 sizes="100vw"
                 priority

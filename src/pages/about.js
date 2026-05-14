@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 
-const profile = "/images/profile/developer-pic-2.jpg";
+const profile = "/images/about.png";
 import { useEffect, useRef } from "react";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
@@ -80,7 +80,7 @@ export default function About() {
               <Image
                 className="h-auto w-full rounded-2xl"
                 src={profile}
-                alt="Codebucks"
+                alt="Rana Muzamil"
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
