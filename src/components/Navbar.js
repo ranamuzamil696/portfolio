@@ -12,7 +12,7 @@ import {
   TwitterIcon,
 } from "./Icons";
 import { motion } from "framer-motion";
-import { useThemeSwitch } from "./Hooks/useThemeSwitch";
+import { useThemeSwitch } from "./hooks/useThemeSwitch";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
