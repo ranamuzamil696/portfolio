@@ -5,13 +5,14 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import proj1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
-import proj2 from "../../public/images/projects/nft-collection-website-cover-image.jpg";
-import proj3 from "../../public/images/projects/fashion-studio-website.jpg";
-import proj4 from "../../public/images/projects/portfolio-cover-image.jpg";
-import proj5 from "../../public/images/projects/agency-website-cover-image.jpg";
-import proj6 from "../../public/images/projects/devdreaming.jpg";
 import TransitionEffect from "@/components/TransitionEffect";
+
+const proj1 = "/images/projects/crypto-screener-cover-image.jpg";
+const proj2 = "/images/projects/nft-collection-website-cover-image.jpg";
+const proj3 = "/images/projects/fashion-studio-website.jpg";
+const proj4 = "/images/projects/portfolio-cover-image.jpg";
+const proj5 = "/images/projects/agency-website-cover-image.jpg";
+const proj6 = "/images/projects/devdreaming.jpg";
 
 const FramerImage = motion(Image);
 
