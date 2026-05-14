@@ -13,6 +13,10 @@ const proj3 = "/images/projects/fashion-studio-website.jpg";
 const proj4 = "/images/projects/portfolio-cover-image.jpg";
 const proj5 = "/images/projects/agency-website-cover-image.jpg";
 const proj6 = "/images/projects/devdreaming.jpg";
+const proj7 = "/images/projects/oporto.jpeg";
+const proj8 = "/images/projects/shopogenie.jpeg";
+const proj9 = "/images/projects/instructor.jpeg";
+const proj10 = "/images/projects/doctor-on-call.jpeg";
 
 const FramerImage = motion(Image);
 
@@ -217,6 +221,42 @@ export default function Projects() {
                 img={proj4}
                 link="https://devdreaming.com/videos/build-stunning-portfolio-website-react-js-framer-motion"
                 github="https://github.com/codebucks27/react-portfolio-final"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Client Campaign"
+                title="Oporto Organic Growth"
+                img={proj7}
+                link="#"
+                github="#"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Client Campaign"
+                title="Shopogenie Leads"
+                img={proj8}
+                link="#"
+                github="#"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Client Campaign"
+                title="Instructor Content Strategy"
+                img={proj9}
+                link="#"
+                github="#"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Client Campaign"
+                title="Doctor On Call Media Buying"
+                img={proj10}
+                link="#"
+                github="#"
               />
             </div>
           </div>

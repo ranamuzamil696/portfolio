@@ -28,17 +28,17 @@ export default function Home() {
         className={`flex min-h-screen items-center text-dark dark:text-light sm:items-start`}
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
-          <div className="flex w-full items-start justify-between md:flex-col">
-            <div className="w-1/2 lg:hidden md:inline-block md:w-full">
+          <div className="flex w-full items-start justify-between gap-10 md:flex-col">
+            <div className="w-full max-w-[420px] lg:hidden md:inline-block md:w-full sm:mx-auto">
               <Image
                 src={profilePic}
                 alt="Rana Muzamil"
-                className="h-auto w-full"
-                sizes="100vw"
+                className="h-auto w-full max-h-[520px] rounded-[2rem] object-cover"
+                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 60vw, 420px"
                 priority
               />
             </div>
-            <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
+            <div className="flex w-full max-w-[560px] flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
                 text="Turning Brands Into Scalable Growth Engines"
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
