@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@styles/*": ["src/styles/*"],
-      "@hooks/*": ["src/components/Hooks/*"],
+      "@hooks/*": ["src/components/hooks/*"],
       "@public/*": ["public/*"]
     }
   }
