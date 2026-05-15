@@ -28,19 +28,19 @@ export default function Home() {
         className={`flex min-h-screen items-center text-dark dark:text-light sm:items-start`}
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
-          <div className="flex w-full items-start justify-between gap-10 md:flex-col">
-            <div className="w-full max-w-[420px] lg:hidden md:inline-block md:w-full sm:mx-auto">
+          <div className="flex w-full items-start justify-start gap-4 md:flex-col px-20">
+            <div className="w-full max-w-[480px] lg:inline-block md:inline-block md:w-full sm:mx-auto">
               <Image
                 src={profilePic}
                 alt="Rana Muzamil"
                 width={420}        // ← YEH ADD KARO
-  height={520}
+  height={620}
                 className="h-auto w-full max-h-[520px] rounded-[2rem] object-cover"
                 sizes="(max-width: 768px) 90vw, (max-width: 1200px) 60vw, 420px"
                 priority
               />
             </div>
-            <div className="flex w-full max-w-[560px] flex-col items-center self-center lg:w-full lg:text-center">
+            <div className="flex w-full p-20 max-w-[720px] flex-col items-start self-start lg:w-full lg:text-left md:items-center md:text-center sm:items-center sm:text-center">
               <AnimatedText
                 text="Turning Brands Into Scalable Growth Engines"
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
