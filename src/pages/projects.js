@@ -1,45 +1,29 @@
 import AnimatedText from "@/components/AnimatedText";
-import { GithubIcon } from "@/components/Icons";
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
+import proj1 from "../../public/images/projects/proj1.jpeg";
+import proj2 from "../../public/images/projects/proj2.jpeg";
+import proj3 from "../../public/images/projects/proj3.jpeg";
+import proj4 from "../../public/images/projects/proj4.jpeg";
 import TransitionEffect from "@/components/TransitionEffect";
-
-const proj1 = "/images/projects/crypto-screener-cover-image.jpg";
-const proj2 = "/images/projects/nft-collection-website-cover-image.jpg";
-const proj3 = "/images/projects/fashion-studio-website.jpg";
-const proj4 = "/images/projects/portfolio-cover-image.jpg";
-const proj5 = "/images/projects/agency-website-cover-image.jpg";
-const proj6 = "/images/projects/devdreaming.jpg";
-const proj7 = "/images/projects/oporto.jpeg";
-const proj8 = "/images/projects/shopogenie.jpeg";
-const proj9 = "/images/projects/instructor.jpeg";
-const proj10 = "/images/projects/doctor-on-call.jpeg";
 
 const FramerImage = motion(Image);
 
-const FeaturedProject = ({ type, title, summary, img, link, github }) => {
-
+const FeaturedProject = ({ type, title, summary, img }) => {
   return (
     <article
-      className="relative flex w-full items-center  justify-between rounded-3xl rounded-br-2xl border
-border-solid border-dark bg-light p-12 shadow-2xl  dark:border-light dark:bg-dark  lg:flex-col 
-lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4 
-    "
+      className="relative flex w-full items-center justify-between rounded-3xl rounded-br-2xl border
+border-solid border-dark bg-light p-12 shadow-2xl dark:border-light dark:bg-dark lg:flex-col 
+lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4"
     >
       <div
-        className="absolute  top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark
-         dark:bg-light  xs:-right-2 xs:h-[102%] xs:w-[100%]
-        xs:rounded-[1.5rem] "
+        className="absolute top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark
+         dark:bg-light xs:-right-2 xs:h-[102%] xs:w-[100%] xs:rounded-[1.5rem]"
       />
 
-      <Link
-        href={link}
-        target={"_blank"}
-        className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
-      >
+      <div className="w-1/2 overflow-hidden rounded-lg lg:w-full">
         <FramerImage
           src={img}
           className="h-auto w-full"
@@ -51,69 +35,35 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
               33vw"
           priority
         />
-      </Link>
+      </div>
       <div className="flex w-1/2 flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
         <span className="text-xl font-medium text-primary dark:text-primaryDark xs:text-base">
           {type}
         </span>
-        <Link
-          href={link}
-          target={"_blank"}
-          className="underline-offset-2 hover:underline"
-        >
-          <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl xs:text-2xl">
-            {title}
-          </h2>
-        </Link>
-        <p className=" my-2 rounded-md font-medium text-dark dark:text-light sm:text-sm">
+        <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl xs:text-2xl">
+          {title}
+        </h2>
+        <p className="my-2 rounded-md font-medium text-dark dark:text-light text-base sm:text-sm xs:text-xs leading-relaxed">
           {summary}
         </p>
-        <div className="mt-2 flex items-center">
-          <Link
-            href={github}
-            target={"_blank"}
-            className="w-10"
-            aria-label="Crypto Screener Application github link"
-          >
-            <GithubIcon />
-          </Link>
-          <Link
-            href={link}
-            target={"_blank"}
-            className="ml-4 rounded-lg
-             bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark 
-             sm:px-4 sm:text-base
-            "
-            aria-label="Crypto Screener Application"
-          >
-            Visit Project
-          </Link>
-        </div>
       </div>
     </article>
   );
 };
 
-const Project = ({ title, type, img, link, github }) => {
-
+const Project = ({ title, type, description, img }) => {
   return (
     <article
-      className="relative flex w-full flex-col items-center justify-center rounded-2xl  rounded-br-2xl 
-      border  border-solid  border-dark bg-light p-6  shadow-2xl dark:border-light dark:bg-dark 
-      xs:p-4
-      "
+      className="relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl 
+      border border-solid border-dark bg-light p-6 shadow-2xl dark:border-light dark:bg-dark 
+      xs:p-4"
     >
       <div
-        className="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark
-         dark:bg-light  md:-right-2 md:w-[101%] xs:h-[102%]
-        xs:rounded-[1.5rem]  "
+        className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark
+         dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]"
       />
 
-      <Link
-        href={link}
-        target={"_blank"}
-        className="w-full cursor-pointer overflow-hidden rounded-lg"
-      >
+      <div className="w-full overflow-hidden rounded-lg">
         <FramerImage
           src={img}
           alt={title}
@@ -124,41 +74,21 @@ const Project = ({ title, type, img, link, github }) => {
               (max-width: 1200px) 50vw,
               33vw"
         />
-      </Link>
+      </div>
       <div className="mt-4 flex w-full flex-col items-start justify-between">
         <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
           {type}
         </span>
 
-        <Link
-          href={link}
-          target={"_blank"}
-          className="underline-offset-2 hover:underline"
-        >
-          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl ">
-            {title}
-          </h2>
-        </Link>
-        <div className="flex w-full items-center  justify-between">
-          <Link
-            href={link}
-            target={"_blank"}
-            className="rounded text-lg
-            font-medium underline md:text-base
-            "
-            aria-label={title}
-          >
-            Visit
-          </Link>
-          <Link
-            href={github}
-            target={"_blank"}
-            className="w-8 md:w-6"
-            aria-label={title}
-          >
-            <GithubIcon />
-          </Link>
-        </div>
+        <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl md:text-xl">
+          {title}
+        </h2>
+
+        {description && (
+          <p className="my-2 text-base font-medium text-dark dark:text-light sm:text-sm xs:text-xs leading-relaxed text-left">
+            {description}
+          </p>
+        )}
       </div>
     </article>
   );
@@ -168,95 +98,56 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Rana Muzamil - Marketing Case Studies | Projects</title>
+        <title>Modern Portfolio Built with Nextjs | Projects Page</title>
         <meta
           name="description"
-          content="Explore Rana Muzamil's marketing case studies and projects showcasing expertise in digital growth systems, paid advertising, and performance-driven marketing strategies."
+          content="Discover the latest webapp projects created by CodeBucks, a Next.js developer with expertise in React.js and full-stack development. Browse software engineering articles and tutorials for tips on creating your own portfolio."
         />
       </Head>
 
       <TransitionEffect />
       <main
-        className={`mb-16  flex w-full flex-col items-center justify-center dark:text-light`}
+        className={`mb-16 flex w-full flex-col items-center justify-center dark:text-light`}
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="Results That Speak!"
+            text="Results That Speaks"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-            <div className="col-span-12">
-              <FeaturedProject
-                type="Featured Project"
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Oporto"
                 img={proj1}
-                link="https://devdreaming.com/videos/build-crypto-screener-app-with-react-tailwind-css"
-                github="https://github.com/codebucks27/CryptoBucks-Final-Code"
+                title="Maketing Manager"
+                description="For the past eight years as Oporto's Marketing Manager in Dubai, I lead the full organic marketing ecosystem across content, PR, campaigns, and delivery platforms. Within my first month, I drove a record-breaking revenue surge from 450K AED to 735K AED, selling 14,000 burgers and hitting the highest sales milestone in Dubai operations. Through data-driven organic scaling, I permanently elevated delivery volume from 7 to over 45+ daily orders and stabilized ongoing monthly revenue above 535K AED."
               />
             </div>
+
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Website Template"
-                title="NFT collection Website"
+                type="Shopogenie Studios"
                 img={proj2}
-                link="https://devdreaming.com/videos/create-nft-collection-website-reactjs"
-                github="https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code"
+                title="Media Buyer"
+                description="I am currently working remotely with Shopogenie Studios, a Pakistan based podcast studio, as a Meta Ads lead generation specialist. With a focused targeting strategy and minimal budget, I consistently generate an average of 7 high quality and fully relevant leads per day, maintaining a 98% success score with zero irrelevant inquiries. This is an ongoing part time freelance role where I efficiently manage and optimize campaigns within one dedicated hour daily, ensuring consistent and performance driven results."
               />
             </div>
+
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Website"
-                title="Fashion Studio Website"
+                type="Instructor Content"
                 img={proj3}
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/codebucks27/wibe-studio"
+                title="Marketing Manager"
+                description="I currently work remotely with a Dubai based IT Expert and Instructor, managing his website and social media while creating AI driven content to strengthen his digital presence. Alongside handling strategy and optimization, I also conduct two weekly sessions with his marketing students, where I guide them through practical techniques and real campaign challenges. My focus is always on improving performance, fixing media buying mistakes, and introducing smarter, results driven marketing strategies."
               />
             </div>
-            <div className="col-span-12">
-              <FeaturedProject
-                type="Portfolio Website"
-                title="React Portfolio Website"
-                summary="A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive."
+
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Doctor On Call"
                 img={proj4}
-                link="https://devdreaming.com/videos/build-stunning-portfolio-website-react-js-framer-motion"
-                github="https://github.com/codebucks27/react-portfolio-final"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Client Campaign"
-                title="Oporto Organic Growth"
-                img={proj7}
-                link="#"
-                github="#"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Client Campaign"
-                title="Shopogenie Leads"
-                img={proj8}
-                link="#"
-                github="#"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Client Campaign"
-                title="Instructor Content Strategy"
-                img={proj9}
-                link="#"
-                github="#"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Client Campaign"
-                title="Doctor On Call Media Buying"
-                img={proj10}
-                link="#"
-                github="#"
+                title="Marketing Manager"
+                description="I worked as a Marketing Manager for a leading Malaysian pharmacy brand, managing its complete digital marketing ecosystem with a strong focus on performance and measurable growth. From social media and landing pages to Google and Meta ads, analytics, and tracking integration, I handled everything end to end to ensure data driven decisions. My approach was always results oriented, optimizing campaigns continuously to improve visibility, engagement, and overall business performance."
               />
             </div>
           </div>

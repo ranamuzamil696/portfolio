@@ -1,20 +1,19 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Logo from "./Logo";
-import { SiFiverr } from "react-icons/si";
-import { SiUpwork } from "react-icons/si";
 import { useRouter } from "next/router";
 import {
-  DribbbleIcon,
-  GithubIcon,
+  FacebookIcon,
+  FiverrIcon,
+  InstagramIcon,
   LinkedInIcon,
   MoonIcon,
-  PinterestIcon,
   SunIcon,
   TwitterIcon,
+  UpworkIcon,
 } from "./Icons";
 import { motion } from "framer-motion";
-import { useThemeSwitch } from "./hooks/useThemeSwitch";
+import { useThemeSwitch } from "./Hooks/useThemeSwitch";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -74,11 +73,7 @@ const Navbar = () => {
   };
 
   return (
-    <header
-      className="w-full flex items-center justify-between px-32 py-8 font-medium z-10 dark:text-light
-    lg:px-16 relative z-1 md:px-12 sm:px-8
-    "
-    >
+    <header className="w-full flex items-center justify-between px-32 py-8 font-medium z-10 dark:text-light lg:px-16 relative z-1 md:px-12 sm:px-8">
       <button
         type="button"
         className=" flex-col items-center justify-center hidden lg:flex"
@@ -98,6 +93,7 @@ const Navbar = () => {
         ></span>
       </button>
 
+      {/* Desktop Navigation */}
       <div className="w-full flex justify-between items-center lg:hidden">
         <nav className="flex items-center justify-center">
           <CustomLink className="mr-4" href="/" title="Home" />
@@ -105,52 +101,68 @@ const Navbar = () => {
           <CustomLink className="mx-4" href="/projects" title="Projects" />
           <CustomLink className="ml-4" href="/articles" title="Testimonials" />
         </nav>
-        <nav
-          className="flex items-center justify-center flex-wrap lg:mt-2
-      "
-        >
-          <motion.a
-            href="https://www.fiverr.com/ranamazamal"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-3"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            aria-label="Checkout my Fiverr profile"
-          >
-            <SiFiverr
-              className={`w-10 h-10 ${mode === "light" ? "text-dark" : "text-white"}`}
-            />
-          </motion.a>
+
+        <nav className="flex items-center justify-center flex-wrap gap-4 sm:gap-3 lg:mt-2">
           <motion.a
             target={"_blank"}
-            className="w-6 mx-3"
-            href="https://www.linkedin.com/in/rana-m-muzamil/#"
+            className="w-6"
+            href="https://www.facebook.com/ranammuzamil195"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label="Checkout my Facebook profile"
+          >
+            <FacebookIcon />
+          </motion.a>
+
+          <motion.a
+            target={"_blank"}
+            className="w-6"
+            href="https://www.instagram.com/dubaistrangermarketer"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label="Checkout my Instagram profile"
+          >
+            <InstagramIcon />
+          </motion.a>         
+
+          <motion.a
+            target={"_blank"}
+            className="w-6"
+            href="https://www.linkedin.com/in/rana-m-muzamil/"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Checkout my linkedin profile"
           >
             <LinkedInIcon />
           </motion.a>
+
           <motion.a
-            href="https://www.upwork.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-3"
+            target={"_blank"}
+            className="w-6"
+            href="https://www.fiverr.com/ranamazamal"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label="Checkout my Fiverr profile"
+          >
+            <FiverrIcon />
+          </motion.a>
+
+          <motion.a
+            target={"_blank"}
+            className="w-6"
+            href="https://www.upwork.com/freelancers/~01a1d8af2452686341?companyReference=2044022256826237259&mp_source=share"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Checkout my Upwork profile"
           >
-            <SiUpwork
-              className={`w-6 h-6 ${mode === "light" ? "text-dark" : "text-white"}`}
-            />
+            <UpworkIcon />
           </motion.a>
 
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`w-6 h-6 ease ml-3 flex items-center justify-center rounded-full p-1  
-            ${mode === "light" ? "bg-dark  text-light" : "bg-light  text-dark"}
-            `}
+            className={`w-6 h-6 ease flex items-center justify-center rounded-full p-1  
+      ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
+      `}
             aria-label="theme-switcher"
           >
             {mode === "light" ? (
@@ -161,12 +173,11 @@ const Navbar = () => {
           </button>
         </nav>
       </div>
+
+      {/* Mobile Navigation Modal */}
       {isOpen ? (
         <motion.div
-          className="min-w-[70vw] sm:min-w-[90vw] flex justify-between items-center flex-col fixed top-1/2 left-1/2 -translate-x-1/2
-      -translate-y-1/2
-      py-32 bg-dark/90 dark:bg-light/75 rounded-lg z-50 backdrop-blur-md
-      "
+          className="min-w-[70vw] sm:min-w-[90vw] flex justify-between items-center flex-col fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-32 bg-dark/90 dark:bg-light/75 rounded-lg z-50 backdrop-blur-md"
           initial={{ scale: 0, x: "-50%", y: "-50%", opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
         >
@@ -196,66 +207,13 @@ const Navbar = () => {
               title="Testimonials"
             />
           </nav>
-          <nav
-            className="flex items-center justify-center  mt-2
-      "
-          >
-            <motion.a
-              target={"_blank"}
-              className="w-6 m-1 mr-3 sm:mx-1"
-              href="#"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Checkout my twitter profile"
-            >
-              <TwitterIcon />
-            </motion.a>
-            <motion.a
-              target={"_blank"}
-              className="w-6 m-1 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
-              href="#"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Checkout my github profile"
-            >
-              <GithubIcon />
-            </motion.a>
-            <motion.a
-              target={"_blank"}
-              className="w-6 m-1 mx-3 sm:mx-1"
-              href="#"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Checkout my linkedin profile"
-            >
-              <LinkedInIcon />
-            </motion.a>
-            <motion.a
-              target={"_blank"}
-              className="w-6 m-1 mx-3 bg-light rounded-full sm:mx-1"
-              href="#"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Checkout my pinterest profile"
-            >
-              <PinterestIcon />
-            </motion.a>
-            <motion.a
-              target={"_blank"}
-              className="w-6 m-1 mx-3 sm:mx-1"
-              href="#"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Checkout my dribbble profile"
-            >
-              <DribbbleIcon />
-            </motion.a>
 
+          <nav className="flex items-center justify-center mt-2">
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
               className={`w-6 h-6 ease m-1 ml-3 sm:mx-1 flex items-center justify-center rounded-full p-1  
-            ${mode === "light" ? "bg-dark  text-light" : "bg-light  text-dark"}
-            `}
+                ${mode === "light" ? "bg-dark  text-light" : "bg-light  text-dark"}
+                `}
               aria-label="theme-switcher"
             >
               {mode === "light" ? (
@@ -268,7 +226,7 @@ const Navbar = () => {
         </motion.div>
       ) : null}
 
-      <div className="absolute left-[50%] top-2 translate-x-[-50%] ">
+      <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
       </div>
     </header>

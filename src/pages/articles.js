@@ -1,62 +1,104 @@
 import AnimatedText from "@/components/AnimatedText";
-import Head from "next/head";
-const testimonialVideo = "/images/testimonial.mp4";
-
 import Layout from "@/components/Layout";
+import { motion } from "framer-motion";
+import Head from "next/head";
 import TransitionEffect from "@/components/TransitionEffect";
 
-export default function Articles() {
+const TestimonialCard = ({ client, title, company, services, videoSrc }) => {
+  return (
+    <article
+      className="relative flex w-full items-center justify-between rounded-3xl rounded-br-2xl border
+      border-solid border-dark bg-light p-12 shadow-2xl dark:border-light dark:bg-dark 
+      xl:p-8 lg:flex-col lg:gap-10 xs:rounded-2xl xs:rounded-br-3xl xs:p-4"
+    >
+      {/* Background Accent Card Graphic */}
+      <div
+        className="absolute top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark
+         dark:bg-light xs:-right-2 xs:h-[102%] xs:w-[100%] xs:rounded-[1.5rem]"
+      />
+
+      {/* Video Container Left Side */}
+      <div className="w-1/2 overflow-hidden rounded-2xl border border-solid border-dark dark:border-light lg:w-full aspect-video shadow-lg">
+        <video
+          className="h-full w-full object-cover"
+          controls
+          preload="metadata"
+          playsInline
+        >
+          <source src={videoSrc} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      {/* Text Meta Content Right Side */}
+      <div className="flex w-1/2 flex-col items-start justify-between pl-10 lg:w-full lg:pl-0">
+        <div className="w-full">
+          <span className="text-xl font-semibold uppercase tracking-wider text-primary dark:text-primaryDark xs:text-sm">
+            Client Review
+          </span>
+
+          <h2 className="my-2 w-full text-left text-4xl font-bold tracking-tight text-dark dark:text-light xl:text-3xl xs:text-2xl">
+            {client}
+          </h2>
+
+          <p className="text-lg font-medium text-dark/70 dark:text-light/70 sm:text-base xs:text-sm">
+            {title} &mdash;{" "}
+            <span className="italic font-semibold text-dark dark:text-light">
+              {company}
+            </span>
+          </p>
+
+          <hr className="my-6 w-full border-t border-dark/20 dark:border-light/20" />
+
+          {/* Render Deliverable Tags */}
+          <div className="mt-4">
+            <h4 className="text-sm font-bold uppercase tracking-widest text-dark/50 dark:text-light/50 mb-3">
+              Services Delivered:
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {services.map((service, index) => (
+                <span
+                  key={index}
+                  className="rounded-full bg-dark/5 px-4 py-1.5 text-sm font-medium text-dark border border-solid border-dark/10
+                           dark:bg-light/10 dark:text-light dark:border-light/10 xs:text-xs"
+                >
+                  {service}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+};
+
+export default function Testimonials() {
   return (
     <>
       <Head>
-        <title>Let them speak | Testimonials</title>
+        <title>Client Testimonials | Marketing Portfolio</title>
         <meta
           name="description"
-          content="Hear from clients who worked with Rana Muzamil on marketing growth, paid ads, and brand performance campaigns."
+          content="See what clients and founders say about working with me. Read case highlights from Meta Ads, paid lead generation, and digital client growth strategies."
         />
       </Head>
       <TransitionEffect />
-      <main
-        className={`w-full mb-16 flex flex-col items-center justify-center dark:text-light overflow-hidden`}
-      >
+      <main className="mb-16 flex w-full flex-col items-center justify-center dark:text-light overflow-hidden">
         <Layout className="pt-16">
           <AnimatedText
-            text="Let them speak"
-            className="!text-8xl !leading-tight mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
+            text="What Clients Say!"
+            className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
 
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-            <section className="space-y-8">
-              <div className="rounded-3xl bg-light p-10 shadow-lg dark:bg-dark dark:shadow-black/20">
-                <p className="text-base leading-8 text-dark/80 dark:text-light/80">
-                  Client: Rj Ahmed
-                </p>
-                <p className="text-base leading-8 text-dark/80 dark:text-light/80 mt-4">
-                  Job Title: Founder of Shopogenie Studios
-                </p>
-                <p className="text-base leading-8 text-dark/80 dark:text-light/80 mt-4">
-                  Podcast Host: Interviews with Entrepreneurs podcast
-                </p>
-                <p className="text-base leading-8 text-dark/80 dark:text-light/80 mt-4">
-                  Services Given: Meta Ads | Paid Leads | Podcast Studio
-                  Bookings
-                </p>
-              </div>
-            </section>
-
-            <section className="space-y-10">
-              <div className="rounded-3xl overflow-hidden bg-light shadow-lg dark:bg-dark dark:shadow-black/20">
-                <video
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-[640px] h-[360px] mx-auto bg-black"
-                >
-                  <source src={testimonialVideo} type="video/mp4" />
-                  Your browser does not support this video format.
-                </video>
-              </div>
-            </section>
+          <div className="flex flex-col gap-32 w-full mt-8">
+            <TestimonialCard
+              client="Rj Ahmed"
+              title="Founder & Podcast Host (Interviews with Entrepreneurs)"
+              company="Shopogenie Studios"
+              services={["Meta Ads", "Paid Leads", "Podcast Studio Bookings"]}
+              videoSrc="/videos/testimonial.mp4"
+            />
           </div>
         </Layout>
       </main>

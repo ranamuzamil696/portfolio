@@ -64,26 +64,26 @@ const Experience = () => {
             <Details
               position="Marketing Manager"
               company="Oporto"
-              companyLink="https://oporto.com"
+              companyLink="https://www.oporto.com/"
               time="2025-Present"
-              address="Dubai, UAE | On Site"
+              address="Dubai, UAE | OnSite"
               work="Led a complete organic marketing transformation that resulted in approximately 22 percent revenue growth from the existing baseline. Achieved the highest sales performance in the brand's history through structured funnels, content strategy, and channel alignment. Increased delivery performance by over 580 percent and boosted monthly product sales volume by nearly 480 percent, all without using paid advertising. Built and executed the full marketing structure end to end."
             />
 
             <Details
               position="Media Buyer"
               company="Scandinavian Lines Logistics"
-              companyLink="#"
+              // companyLink="https://facebook.com"
               time="2024-2025"
-              address="Dubai, UAE | On Site"
+              address="Dubai, UAE | OnSite"
               work="Managed Meta and Google Ads with a consistent 80 percent success performance score, delivering daily high-intent leads. Designed and optimized paid media funnels supported by strong tracking infrastructure using analytics and event-based measurement. Took a data-driven approach to daily optimization, continuously improving lead quality and revenue performance through structured campaign management."
             />
 
             <Details
               position="Marketing Manager"
               company="Atta ul Zahoor LLC"
-              companyLink="#"
-              time="2022-2024"
+              // companyLink="https://amazon.com"
+              time="2022-2024 "
               address="Dubai, UAE | On Site"
               work="Handled complete digital presence including social media management, WordPress website development, and lead generation. Planned and executed daily content while monitoring campaign performance and focusing on measurable outcomes. Supported business growth through consistent execution, optimization, and result-focused marketing activities."
             />
@@ -91,7 +91,7 @@ const Experience = () => {
             <Details
               position="Media Buyer"
               company="Shopogenie"
-              companyLink="#"
+              // companyLink="https://microsoft.com"
               time="2025-Present"
               address="United Kingdom | Freelance"
               work="Managing Meta Ads for a podcast production company offering studio and editing services. Generating consistent, high-quality leads with a 99 percent success performance score. Campaigns are structured for precision targeting and lead quality, supporting steady growth and client acquisition."
@@ -100,7 +100,7 @@ const Experience = () => {
             <Details
               position="Media Buyer"
               company="Simba Seven"
-              companyLink="#"
+              // companyLink="https://mit.edu"
               time="2019-2022"
               address="California, USA | Freelance"
               work="Worked as a full-cycle media buyer for a logistics and trucking business. Managed end-to-end paid campaigns across Meta, Google, and YouTube Ads with an 85 percent success performance score. Focused on lead generation, campaign scaling, and continuous optimization to support sustained business growth."
