@@ -135,9 +135,9 @@ export default function Projects() {
 
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Instructor Content"
+                type="IT Expert"
                 img={proj3}
-                title="Marketing Manager"
+                title="Digital Marketing Expert "
                 description="I currently work remotely with a Dubai based IT Expert and Instructor, managing his website and social media while creating AI driven content to strengthen his digital presence. Alongside handling strategy and optimization, I also conduct two weekly sessions with his marketing students, where I guide them through practical techniques and real campaign challenges. My focus is always on improving performance, fixing media buying mistakes, and introducing smarter, results driven marketing strategies."
               />
             </div>
@@ -146,8 +146,8 @@ export default function Projects() {
               <Project
                 type="Doctor On Call"
                 img={proj4}
-                title="Marketing Manager"
-                description="I worked as a Marketing Manager for a leading Malaysian pharmacy brand, managing its complete digital marketing ecosystem with a strong focus on performance and measurable growth. From social media and landing pages to Google and Meta ads, analytics, and tracking integration, I handled everything end to end to ensure data driven decisions. My approach was always results oriented, optimizing campaigns continuously to improve visibility, engagement, and overall business performance."
+                title="Digital Marketing Expert"
+                description="I worked as a Digital Marketing Expert for a leading Malaysian pharmacy brand, managing its complete digital marketing ecosystem with a strong focus on performance and measurable growth. From social media and landing pages to Google and Meta ads, analytics, and tracking integration, I handled everything end to end to ensure data driven decisions. My approach was always results oriented, optimizing campaigns continuously to improve visibility, engagement, and overall business performance."
               />
             </div>
           </div>

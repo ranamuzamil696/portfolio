@@ -102,73 +102,73 @@ const Navbar = () => {
           <CustomLink className="ml-4" href="/articles" title="Testimonials" />
         </nav>
 
-        <nav className="flex items-center justify-center flex-wrap gap-4 sm:gap-3 lg:mt-2">
+        <nav className="flex items-center justify-center flex-wrap gap-4 md:gap-5 sm:gap-4 lg:mt-4">
           <motion.a
             target={"_blank"}
-            className="w-6"
+            className="w-8 h-8 flex"
             href="https://www.facebook.com/ranammuzamil195"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Checkout my Facebook profile"
           >
-            <FacebookIcon />
+            <FacebookIcon shape="circle" />
           </motion.a>
 
           <motion.a
             target={"_blank"}
-            className="w-6"
+            className="w-8 h-8 flex"
             href="https://www.instagram.com/dubaistrangermarketer"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Checkout my Instagram profile"
           >
-            <InstagramIcon />
-          </motion.a>         
+            <InstagramIcon shape="box" />
+          </motion.a>
 
           <motion.a
             target={"_blank"}
-            className="w-6"
+            className="w-8 h-8 flex"
             href="https://www.linkedin.com/in/rana-m-muzamil/"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Checkout my linkedin profile"
           >
-            <LinkedInIcon />
+            <LinkedInIcon shape="box" />
           </motion.a>
 
           <motion.a
             target={"_blank"}
-            className="w-6"
+            className="w-8 h-8 flex"
             href="https://www.fiverr.com/ranamazamal"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Checkout my Fiverr profile"
           >
-            <FiverrIcon />
+            <FiverrIcon shape="circle" />
           </motion.a>
 
           <motion.a
             target={"_blank"}
-            className="w-6"
+            className="w-8 h-8 flex"
             href="https://www.upwork.com/freelancers/~01a1d8af2452686341?companyReference=2044022256826237259&mp_source=share"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Checkout my Upwork profile"
           >
-            <UpworkIcon />
+            <UpworkIcon shape="circle" />
           </motion.a>
 
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`w-6 h-6 ease flex items-center justify-center rounded-full p-1  
+            className={`w-8 h-8 ease flex items-center justify-center rounded-full p-2 transition-colors duration-200
       ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
-      `}
+    `}
             aria-label="theme-switcher"
           >
             {mode === "light" ? (
-              <SunIcon className={"fill-dark"} />
+              <SunIcon className={"fill-dark w-full h-auto"} />
             ) : (
-              <MoonIcon className={"fill-dark"} />
+              <MoonIcon className={"fill-dark w-full h-auto"} />
             )}
           </button>
         </nav>

@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import profile from "../../public/images/profile/rm-pic-1.png";
+import profile from "../../public/images/profile/about_profile_pic.png";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Skills from "@/components/Skills";
@@ -15,6 +15,7 @@ function AnimatedNumberFramerMotion({ value }) {
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 });
   const isInView = useInView(ref, { once: true });
+
   useEffect(() => {
     if (isInView) {
       motionValue.set(value);
@@ -48,7 +49,7 @@ export default function About() {
       </Head>
       <TransitionEffect />
       <main
-        className={`flex  w-full flex-col items-center justify-center dark:text-light`}
+        className={`flex w-full flex-col items-center justify-center dark:text-light`}
       >
         <Layout className="pt-16">
           <AnimatedText
@@ -84,33 +85,38 @@ export default function About() {
                 working with brands and teams that are serious about growth.
               </p>
             </div>
+
+            {/* IMAGE CONTAINER */}
+            {/* Set to w-[85%] to make it perfectly mid-sized without being tiny */}
             <div
-              className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 
-            bg-light p-8 dark:border-light dark:bg-dark
-            xl:col-span-4 md:col-span-8 md:order-1
+              className="relative col-span-3 h-max w-[105%] mx-auto rounded-2xl border-2 border-solid border-dark 
+            bg-light p-6 dark:border-light dark:bg-dark
+            xl:col-span-4 xl:w-full md:col-span-8 md:order-1
             "
             >
               <div
-                className="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%]  rounded-[2rem] rounded-br-3xl 
+                className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl 
                 bg-dark
-        dark:bg-light  "
+        dark:bg-light "
               />
               <Image
                 className="h-auto w-full rounded-2xl"
                 src={profile}
-                alt="Codebucks"
+                alt="Rana Muzamil"
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
                 priority
               />
             </div>
+
+            {/* STATS CONTAINER */}
             <div
-              className="col-span-2 flex flex-col items-end justify-between 
-  xl:col-span-8 xl:flex-row xl:items-center md:order-3
+              className="col-span-2 flex flex-col items-end justify-center 
+  xl:col-span-8 xl:flex-row xl:items-center xl:justify-around md:order-3
   
-  /* Vertical spacing for medium, small, and extra-small screens */
-  gap-y-12 md:gap-y-8 xl:gap-y-0"
+  /* Increased gap-y to 12 to give them clean vertical breathing room */
+  gap-y-12 xl:gap-y-0"
             >
               {/* Stat Block 1 */}
               <div className="flex flex-col items-end justify-center xl:items-center">
@@ -119,7 +125,7 @@ export default function About() {
                 </span>
                 <h2
                   className="mb-0 xl:mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-    xl:text-center md:text-lg sm:text-base xs:text-sm"
+xl:text-center md:text-lg sm:text-base xs:text-sm"
                 >
                   satisfied clients
                 </h2>
@@ -132,7 +138,7 @@ export default function About() {
                 </span>
                 <h2
                   className="mb-0 xl:mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-    xl:text-center md:text-lg sm:text-base xs:text-sm"
+xl:text-center md:text-lg sm:text-base xs:text-sm"
                 >
                   projects completed
                 </h2>
@@ -145,7 +151,7 @@ export default function About() {
                 </span>
                 <h2
                   className="mb-0 xl:mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-    xl:text-center md:text-lg sm:text-base xs:text-sm"
+xl:text-center md:text-lg sm:text-base xs:text-sm"
                 >
                   Years of experience
                 </h2>

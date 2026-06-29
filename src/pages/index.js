@@ -6,14 +6,14 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
-import profilePic from "../../public/images/profile/rm-pic.png";
+import profilePic from "../../public/images/profile/index_profile_pic.png";
 import TransitionEffect from "@/components/TransitionEffect";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Rana Muzammil Marketing - Manager</title>
+        <title>RM Portfolio - Marketing Manager</title>
         <meta
           name="description"
           content="Explore CodeBucks's Next.js developer portfolio and 
