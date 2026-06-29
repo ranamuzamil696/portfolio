@@ -50,6 +50,13 @@ const Education = () => {
             info="Built a strong foundation in programming, databases, and software systems. Developed problem-solving and analytical skills applied later in real-world digital and business environments."
           />
 
+           <Details
+            type="Certified: Meta & Google Ads"
+            time="2018-2019"
+            place="Ads Wizard"
+            info="Trained in paid advertising fundamentals across Meta and Google platforms. Built a strong base in campaign structure, targeting, optimization, and performance tracking."
+          />
+
           <Details
             type="Certified: Data Analytics & Machine Learning"
             time="2022"
@@ -65,18 +72,13 @@ const Education = () => {
           />
 
           <Details
-            type="Certified: AI – HCIA"
+            type="Certified: HCIA - AI"
             time="2022"
             place="Huawei"
             info="Developed foundational knowledge of artificial intelligence concepts and real-world use cases. Strengthened understanding of how AI supports automation, analytics, and smarter decision-making."
           />
 
-          <Details
-            type="Certified: Meta & Google Ads"
-            time="2018-2019"
-            place="Ads Wizard"
-            info="Trained in paid advertising fundamentals across Meta and Google platforms. Built a strong base in campaign structure, targeting, optimization, and performance tracking."
-          />
+         
         </ul>
       </div>
     </div>

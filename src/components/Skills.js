@@ -73,7 +73,7 @@ const Skills = () => {
           y="calc(6vh * var(--y-scale))"
         />
         <Skill
-          name="Content"
+          name="Content Creation"
           x="calc(0vw * var(--x-scale))"
           y="calc(18vh * var(--y-scale))"
         />

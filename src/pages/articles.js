@@ -20,7 +20,7 @@ const TestimonialCard = ({ client, title, company, services, videoSrc }) => {
       {/* Video Container Left Side */}
       <div className="w-1/2 overflow-hidden rounded-2xl border border-solid border-dark dark:border-light lg:w-full aspect-video shadow-lg">
         <video
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
           controls
           preload="metadata"
           playsInline
