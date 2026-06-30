@@ -15,18 +15,13 @@ export default function Home() {
       <Head>
         <title>RM Portfolio - Marketing Manager</title>
         <meta
-          name="description"
-          content="I Rana Muzamil, help brands turn ideas into scalable digital growth systems. Explore my work focused on strategy, execution, and performance driven marketing that delivers real business results."
-        />
-
-        <meta
           property="og:image"
           content="https://ranamuzamil.com/images/profile/background.jpg"
         />
         <meta property="og:title" content="RM Portfolio - Marketing Manager" />
         <meta
           property="og:description"
-          content="I Rana Muzamil, help brands turn ideas into scalable digital growth systems."
+          content="I help brands turn ideas into scalable digital growth systems. Explore my work focused on strategy, execution, and performance driven marketing that delivers real business results."
         />
         <meta property="og:url" content="https://ranamuzamil.com" />
         <meta property="og:type" content="website" />
