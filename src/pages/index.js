@@ -16,9 +16,7 @@ export default function Home() {
         <title>RM Portfolio - Marketing Manager</title>
         <meta
           name="description"
-          content="Explore CodeBucks's Next.js developer portfolio and 
-        discover the latest webapp projects and software engineering articles. 
-        Showcase your skills as a full-stack developer and software engineer."
+          content="I Rana Muzamil, help brands turn ideas into scalable digital growth systems. Explore my work focused on strategy, execution, and performance driven marketing that delivers real business results."
         />
       </Head>
 
