@@ -18,7 +18,18 @@ export default function Home() {
           name="description"
           content="I Rana Muzamil, help brands turn ideas into scalable digital growth systems. Explore my work focused on strategy, execution, and performance driven marketing that delivers real business results."
         />
-        <link rel="icon" type="image/x-icon" href="../../public/favicon.ico" />
+
+        <meta
+          property="og:image"
+          content="https://ranamuzamil.com/images/profile/index_profile_pic.png"
+        />
+        <meta property="og:title" content="RM Portfolio - Marketing Manager" />
+        <meta
+          property="og:description"
+          content="I Rana Muzamil, help brands turn ideas into scalable digital growth systems."
+        />
+        <meta property="og:url" content="https://ranamuzamil.com" />
+        <meta property="og:type" content="website" />
       </Head>
 
       <TransitionEffect />
