@@ -21,7 +21,7 @@ export default function Home() {
 
         <meta
           property="og:image"
-          content="https://ranamuzamil.com/images/profile/index_profile_pic.png"
+          content="https://ranamuzamil.com/images/profile/background.jpg"
         />
         <meta property="og:title" content="RM Portfolio - Marketing Manager" />
         <meta
