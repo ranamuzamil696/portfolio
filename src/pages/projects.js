@@ -120,7 +120,7 @@ export default function Projects() {
                 type="Oporto"
                 img={proj1}
                 title="Maketing Manager"
-                description="For the past eight years as Oporto's Marketing Manager in Dubai, I lead the full organic marketing ecosystem across content, PR, campaigns, and delivery platforms. Within my first month, I drove a record-breaking revenue surge from 450K AED to 735K AED, selling 14,000 burgers and hitting the highest sales milestone in Dubai operations. Through data-driven organic scaling, I permanently elevated delivery volume from 7 to over 45+ daily orders and stabilized ongoing monthly revenue above 535K AED."
+                description="For the past one year, I have been working onsite in Dubai as the Marketing Manager for Oporto, an Australian F&B brand with 275+ branches globally. I manage the complete A to Z organic marketing ecosystem including content creation, campaigns, delivery growth, PR, influencers, and digital platforms. In my first month, I increased revenue by 63%, marking the highest sales milestone in Dubai operations. I scaled daily delivery orders from a baseline of 7–8 to consistently maintaining a 900% increase in daily orders. Through structured organic strategies, I stabilized revenue at an 18.9% higher monthly baseline and sold 14,000 burgers in my first month."
               />
             </div>
 
