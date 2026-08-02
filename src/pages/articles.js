@@ -3,13 +3,22 @@ import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import TransitionEffect from "@/components/TransitionEffect";
+import ReactCountryFlag from "react-country-flag";
 
-const TestimonialCard = ({ client, title, company, services, videoSrc }) => {
+const TestimonialCard = ({
+  client,
+  title,
+  company,
+  country,
+  flag,
+  services,
+  videoSrc,
+}) => {
   return (
     <article
-      className="relative flex w-full items-center justify-between rounded-3xl rounded-br-2xl border
-      border-solid border-dark bg-light p-12 shadow-2xl dark:border-light dark:bg-dark 
-      xl:p-8 lg:flex-col lg:gap-10 xs:rounded-2xl xs:rounded-br-3xl xs:p-4"
+      className="relative flex w-full flex-col justify-between rounded-3xl rounded-br-2xl border
+      border-solid border-dark bg-light p-8 shadow-2xl dark:border-light dark:bg-dark 
+      xs:rounded-2xl xs:rounded-br-3xl xs:p-5"
     >
       {/* Background Accent Card Graphic */}
       <div
@@ -17,8 +26,8 @@ const TestimonialCard = ({ client, title, company, services, videoSrc }) => {
          dark:bg-light xs:-right-2 xs:h-[102%] xs:w-[100%] xs:rounded-[1.5rem]"
       />
 
-      {/* Video Container Left Side */}
-      <div className="w-1/2 overflow-hidden rounded-2xl border border-solid border-dark dark:border-light lg:w-full aspect-video shadow-lg">
+      {/* Video Container (Top) */}
+      <div className="w-full overflow-hidden rounded-2xl border border-solid border-dark dark:border-light aspect-video shadow-lg mb-6">
         <video
           className="h-full w-full object-contain"
           controls
@@ -30,37 +39,59 @@ const TestimonialCard = ({ client, title, company, services, videoSrc }) => {
         </video>
       </div>
 
-      {/* Text Meta Content Right Side */}
-      <div className="flex w-1/2 flex-col items-start justify-between pl-10 lg:w-full lg:pl-0">
+      {/* Text Meta Content (Bottom) */}
+      <div className="flex w-full flex-col justify-between">
         <div className="w-full">
-          <span className="text-xl font-semibold uppercase tracking-wider text-primary dark:text-primaryDark xs:text-sm">
-            Client Review
-          </span>
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-lg font-semibold uppercase tracking-wider text-primary dark:text-primaryDark xs:text-xs">
+              Client Review
+            </span>
 
-          <h2 className="my-2 w-full text-left text-4xl font-bold tracking-tight text-dark dark:text-light xl:text-3xl xs:text-2xl">
+            {/* Country & Flag Badge */}
+            {country && (
+              <div className="flex items-center gap-1.5 rounded-full bg-dark/5 dark:bg-light/10 border border-solid border-dark/10 dark:border-light/10 px-3 py-1 text-xs font-medium text-dark dark:text-light">
+                {flag && (
+                  <ReactCountryFlag
+                    countryCode={flag}
+                    svg
+                    style={{
+                      width: "1.5em",
+                      height: "1.5em",
+                      borderRadius: "2px",
+                      display: "inline-block",
+                    }}
+                    title={country}
+                  />
+                )}
+                <span>{country}</span>
+              </div>
+            )}
+          </div>
+
+          <h2 className="my-2 w-full text-left text-2xl font-bold tracking-tight text-dark dark:text-light xl:text-xl">
             {client}
           </h2>
 
-          <p className="text-lg font-medium text-dark/70 dark:text-light/70 sm:text-base xs:text-sm">
+          <p className="text-base font-medium text-dark/70 dark:text-light/70 xs:text-sm">
             {title} &mdash;{" "}
             <span className="italic font-semibold text-dark dark:text-light">
               {company}
             </span>
           </p>
 
-          <hr className="my-6 w-full border-t border-dark/20 dark:border-light/20" />
+          <hr className="my-4 w-full border-t border-dark/20 dark:border-light/20" />
 
           {/* Render Deliverable Tags */}
-          <div className="mt-4">
-            <h4 className="text-sm font-bold uppercase tracking-widest text-dark/50 dark:text-light/50 mb-3">
+          <div>
+            <h4 className="text-xs font-bold uppercase tracking-widest text-dark/50 dark:text-light/50 mb-2">
               Services Delivered:
             </h4>
             <div className="flex flex-wrap gap-2">
               {services.map((service, index) => (
                 <span
                   key={index}
-                  className="rounded-full bg-dark/5 px-4 py-1.5 text-sm font-medium text-dark border border-solid border-dark/10
-                           dark:bg-light/10 dark:text-light dark:border-light/10 xs:text-xs"
+                  className="rounded-full bg-dark/5 px-3 py-1 text-xs font-medium text-dark border border-solid border-dark/10
+                             dark:bg-light/10 dark:text-light dark:border-light/10"
                 >
                   {service}
                 </span>
@@ -80,7 +111,7 @@ export default function Testimonials() {
         <title>Client Testimonials | Marketing Portfolio</title>
         <meta
           name="description"
-          content="See what clients and founders say about working with me. Read case highlights from Meta Ads, paid lead generation, and digital client growth strategies."
+          content="See what clients and founders say about working with me."
         />
       </Head>
       <TransitionEffect />
@@ -91,13 +122,31 @@ export default function Testimonials() {
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
 
-          <div className="flex flex-col gap-32 w-full mt-8">
+          {/* 2-Column Grid Layout */}
+          <div className="grid grid-cols-2 gap-16 lg:grid-cols-1 w-full mt-8 gap-y-20">
             <TestimonialCard
               client="Rj Ahmed"
               title="Founder & Podcast Host (Interviews with Entrepreneurs)"
               company="Shopogenie Studios"
+              country="Pakistan"
+              flag="pk"
               services={["Meta Ads", "Paid Leads", "Podcast Studio Bookings"]}
               videoSrc="/videos/testimonial.mp4"
+            />
+
+            <TestimonialCard
+              client="Dr Lindie"
+              title="Founder & Ceo"
+              company="Her Studios"
+              country="United States, California"
+              flag="us"
+              services={[
+                "Beauty salon",
+                "Website Creation",
+                "Meta Ads",
+                "Paid Leads",
+              ]}
+              videoSrc="/videos/testimonial-1.mp4"
             />
           </div>
         </Layout>
