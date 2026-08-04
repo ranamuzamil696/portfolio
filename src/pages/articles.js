@@ -136,12 +136,12 @@ export default function Testimonials() {
 
             <TestimonialCard
               client="Dr Lindie"
-              title="Founder & Ceo"
+              title="Founder & Ceo Beauty Salon"
               company="Her Studios"
-              country="United States, California"
+              country="United States"
               flag="us"
               services={[
-                "Beauty salon",
+                "Social Media Marketing",
                 "Website Creation",
                 "Meta Ads",
                 "Paid Leads",
